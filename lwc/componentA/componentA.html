@@ -1,0 +1,20 @@
+<template>
+	<lightning-card variant="Narrow" title="Component A">
+		<div class="slds-p-around_large">
+			<lightning-layout multiple-rows>
+				<lightning-layout-item size="9">
+					<lightning-input lwc:ref="userName" label="Name"></lightning-input>
+				</lightning-layout-item>
+				<lightning-layout-item size="2" class="slds-m-top_large slds-m-left_small">
+					<lightning-button label="Submit" title="titleName" onclick={handleClick}>
+					</lightning-button>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" class="slds-m-top_large">
+					<!-- <c-component-b user-name={parentUserName}></c-component-b> -->
+					User Name (Grand Child) : {userName1}
+                    <c-component-b lwc:ref="compB" oncomponentcevent={handlecompocEvent}></c-component-b>					
+				</lightning-layout-item>
+			</lightning-layout>
+		</div>
+	</lightning-card>
+</template>

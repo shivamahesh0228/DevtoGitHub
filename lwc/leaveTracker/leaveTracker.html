@@ -1,0 +1,12 @@
+<template>
+	<lightning-card>		
+		<lightning-tabset variant="standard" active-tab-value="one">
+			<lightning-tab label="My Leaves" value="one">
+				<c-my-leaves onrefreshleaverequests={refreshLeaveRequestHandler}></c-my-leaves>
+			</lightning-tab>
+			<lightning-tab label="Leave Request" value="two">
+				<c-leave-requests lwc:ref="myLeaveComp"></c-leave-requests>
+			</lightning-tab>
+		</lightning-tabset>
+	</lightning-card>
+</template>

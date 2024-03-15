@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Parent to Child Communication">
+        <div class="slds-p-around_large">
+            <h1>Using Public Property</h1>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="9">
+                    <lightning-input label="Enter Value" lwc:ref="primaryvalue"
+                        onchange={handlesubmit}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" class="slds-m-top_large slds-m-left_small">
+                    <lightning-button label="Enter" variant="brand" onclick={handlesubmit}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout multiple-rows>
+                Child to Parent Component Display (Using Custom Event)
+
+                <lightning-layout-item size="12">
+                    Secundary Value: {secundaryValue}
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout multiple-rows>
+            Child Component Display
+
+                <lightning-layout-item size="12">
+                    <c-l-w-c-child-component lwc:ref="childComp" primary-value={primaryValue}
+                        oncustomevent={handleParentEvent}></c-l-w-c-child-component>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

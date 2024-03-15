@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Account PicklistValues">
+        <template if:true={picklistResults.data}>
+            <lightning-combobox  label="Rating" placeholder="Select Progress"
+                options={picklistResults.data.values}></lightning-combobox>
+        </template>
+    </lightning-card>
+</template>

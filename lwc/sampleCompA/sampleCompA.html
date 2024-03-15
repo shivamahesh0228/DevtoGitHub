@@ -1,0 +1,32 @@
+<template>
+	<lightning-card title="Communication between Components (Parent to Child Components)">
+		<lightning-layout>
+			<lightning-layout-item size="1"></lightning-layout-item>
+			<lightning-layout-item size="3">
+				<h1>Component A</h1>
+			</lightning-layout-item>
+		</lightning-layout>
+		<lightning-layout>
+			<lightning-layout-item size="1"></lightning-layout-item>
+			<lightning-layout-item>
+				<lightning-input label="Enter value A" onchange={handleclick}></lightning-input>
+                <lightning-input label="Enter value B" ></lightning-input>
+                <lightning-button label="Submit" onclick={handleaclick}></lightning-button>
+			</lightning-layout-item>
+		</lightning-layout>
+        <template lwc:if={isvisiblecompB}>
+		<lightning-layout>
+			<lightning-layout-item size="1"></lightning-layout-item>
+			<lightning-layout-item size="3">
+				<h1>Component B</h1> <h1>Public Property & Public Method</h1>
+			</lightning-layout-item>
+		</lightning-layout>
+		<lightning-layout>
+			<lightning-layout-item size="1"></lightning-layout-item>
+			<lightning-layout-item size="3">
+					<c-sample-comp-b lwc:ref="CompB" comp-b-message={sampleMessageA}></c-sample-comp-b>
+			</lightning-layout-item>
+		</lightning-layout>
+    </template>
+	</lightning-card>
+</template>
