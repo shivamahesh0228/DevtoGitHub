@@ -1,0 +1,23 @@
+<template>
+    Primary Value (Public Property) : {primaryValue}
+
+    Primary Value (Public Method) : {primaryMethodValue}
+
+
+    <lightning-card title="Child to Parent Component">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="9">
+                <lightning-input label="Enter Value" lwc:ref="secoundaryvalue"
+                    onchange={handlesubmit}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" class="slds-m-top_large slds-m-left_small">
+                <lightning-button label="Enter" variant="brand" onclick={handlesubmit}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12">
+                Child Comp Secundary Value: {secundaryValue}
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

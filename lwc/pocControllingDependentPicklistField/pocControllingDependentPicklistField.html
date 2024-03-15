@@ -1,0 +1,26 @@
+<!-- 
+Author : K Shiva Mahesh
+Description: Display State Picklist values and Based on State populate City Picklist ,
+Main component to display dropdown with picklist values
+-->
+<template>
+    <lightning-card variant="Narrow" title="Controlling and Depedent Picklist Field"
+        name="Controlling and Depedent Picklist Field">
+        <template if:true={getStatePicklistValues.data}>
+            <lightning-combobox class="slds-p-around_medium lgc-bg" label="State" placeholder="Select State"
+                options={getStatePicklistValues.data.values} onchange={handleStstaeChange}></lightning-combobox>
+        </template>
+        <template if:true={finalDependentCityVal}>
+            <lightning-combobox class="slds-p-around_medium lgc-bg" label="City" placeholder="Select City"
+                options={finalDependentCityVal}></lightning-combobox>
+        </template>
+    </lightning-card>
+    <lightning-card variant="Narrow" title="Multi Select Picklist" name="Multi Select Picklist">
+        <div class="slds-p-around_medium lgc-bg">
+            <template if:true={isMultiple}>
+                <c-multiple-select-picklist multi-select="true" options={finalDependentCityVal}
+                    selected-values={selectedValue} label="Select Cities"></c-multiple-select-picklist>
+            </template>
+        </div>
+    </lightning-card>
+</template>

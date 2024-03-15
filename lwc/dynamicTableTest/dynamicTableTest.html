@@ -1,0 +1,8 @@
+<template>
+	<lightning-card variant="Narrow" title="Dynamic Table">
+		<c-dynamic-table object-api-name='Account' column-list={columns} title='Dynamic Account Record Creation'>
+		</c-dynamic-table>
+		<br/>
+		<lightning-button variant="brand" label="Submit" onclick={submit}></lightning-button>
+	</lightning-card>
+</template>

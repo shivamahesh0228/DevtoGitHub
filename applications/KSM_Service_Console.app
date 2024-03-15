@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>KSM Service cloud Console</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>true</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>KSM Service Console</label>
+    <navType>Console</navType>
+    <setupExperience>all</setupExperience>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>Parent__c</tabs>
+    <tabs>Child__c</tabs>
+    <tabs>TrainingSF__c</tabs>
+    <tabs>Leave_Request__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>KSM_Service_Console_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>Child__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Leave_Request__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Parent__c</tab>
+        </mappings>
+        <mappings>
+            <tab>TrainingSF__c</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Account</tab>
+        </mappings>
+        <mappings>
+            <fieldName>AccountId</fieldName>
+            <tab>standard-Case</tab>
+        </mappings>
+        <mappings>
+            <fieldName>AccountId</fieldName>
+            <tab>standard-Contact</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

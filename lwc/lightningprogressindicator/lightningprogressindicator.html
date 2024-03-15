@@ -1,0 +1,22 @@
+<template>
+	<div class="slds-theme_default">
+		<lightning-card variant="Narrow" title="Process Indicator">
+			<div class="slds-p-around_medium">
+				<lightning-progress-indicator type="path" current-step={selectedStep}>
+					<lightning-progress-step label="Account" value="account" onclick={selectStepAccount}>
+					</lightning-progress-step>
+					<lightning-progress-step label="Contact" value="contact" onclick={selectStepContact}>
+					</lightning-progress-step>
+					<lightning-progress-step label="Opportunity" value="opportunity" onclick={selectStepOpportunity}>
+					</lightning-progress-step>
+				</lightning-progress-indicator>
+				<div class="slds-clearfix">
+					<br />
+					<lightning-button label="Back" class="slds-float_left" onclick={previousStep}></lightning-button>
+					<lightning-button label="Next" class="slds-float_right" onclick={nextStep}></lightning-button>
+				</div>
+			</div>
+		</lightning-card>
+
+	</div>
+</template>

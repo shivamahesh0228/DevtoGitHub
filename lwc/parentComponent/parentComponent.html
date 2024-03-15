@@ -1,0 +1,20 @@
+<template>
+	<lightning-card variant="Narrow" title="Parent to Child" icon-name="standard:account">
+		<p>This Parent Component</p>
+		</br>
+		USER ID : {userId}</br>
+		{parenMessage}
+		</br>
+		Count : {count}
+		</br>
+
+		<p class="slds-p-horizontal_small">Account Details</p>
+		</br>
+		<!-- <lightning-datatable key-field="id" data={accountList} columns={columns}>
+		</lightning-datatable> -->
+	</lightning-card>
+	<lightning-card variant="Brand" title="Child to Parent" icon-name="standard:account">
+		<p>This Child Component</p>
+		<c-child-component child-message={parenMessage} onparenthandleclick={handleParentClick}></c-child-component>
+	</lightning-card>
+</template>

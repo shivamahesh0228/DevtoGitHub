@@ -1,0 +1,12 @@
+<template>	
+	<lightning-card variant="Narrow" class="slds-text-heading_small slds-card_boundary"  title="Wire Account List" icon-name="standard:account">
+		<template lwc:if={accountList}>
+			<template for:each={accountList} for:item="acc">
+				<p key={acc.Id}>{acc.Name}</p>
+			</template>
+		</template>
+		<template lwc:elseif={error}>
+			<p>{error}</p>
+		</template>
+	</lightning-card>
+	</template>
